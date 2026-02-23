@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pestify Pricing</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Pestify Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="demo.html">Request a demo</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary"
+         href="https://app.pestify.com/login"
+         target="_blank"
+         rel="noopener noreferrer">
+        Login
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Simple, scalable pricing.</h1>
+    <p class="lead">
+    Choose a plan that fits your team size and operational needs.
+    </p>
+
+    <div class="trial-banner">
+     All plans include a <strong>1-Month Free Trial</strong>. No commitment.
+    </div>
+  </div>
+</section>
+
+<!-- PRICING TABLE -->
+<section>
+  <div class="container pricing-grid">
+
+    <!-- STARTER -->
+    <div class="pricing-card">
+    <div class="trial-badge">1 Month Free Trial</div>
+      <h3>Starter</h3>
+      <div class="price">€39<span>/month</span></div>
+      <p class="pricing-sub">For small teams starting digital operations.</p>
+      <ul>
+        <li>Includes 1 technician</li>
+        <li>50 customer profiles</li>
+        <li>Access to all features</li>
+        <li>Default branding</li>
+      </ul>
+      <a class="btn" href="demo.html">Start Free Trial</a>
+    </div>
+
+    <!-- PROFESSIONAL -->
+    <div class="pricing-card featured">
+      <div class="badge">Most Popular</div>
+      <div class="trial-badge">1 Month Free Trial</div>
+      <h3>Professional</h3>
+      <div class="price">€79<span>/month</span></div>
+      <p class="pricing-sub">For growing pest control companies and more.</p>
+      <ul>
+        <li>Includes 3 technicians</li>
+        <li>Unlimited customer profiles</li>
+        <li>Priority support</li>
+        <li>Custom branding</li>
+      </ul>
+      <a class="btn btn-primary"
+         href="https://app.pestify.com/login"
+         target="_blank"
+         rel="noopener noreferrer">
+        Start Free Trial
+      </a>
+    </div>
+
+    <!-- ENTERPRISE -->
+    <div class="pricing-card">
+      <h3>Enterprise</h3>
+      <div class="price">Custom</div>
+      <p class="pricing-sub">For large-scale or multi-region companies.</p>
+      <ul>
+        <li>Custom teams</li>
+        <li>Multi-branch management</li>
+        <li>Dedicated onboarding</li>
+        <li>Custom branding</li>
+      </ul>
+      <a class="btn" href="contact.html">Contact Sales</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">PESTIFY</div>
+      <div class="footer-copy">
+        © <span id="year"></span> Pest - Free. All rights reserved.
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <button class="footer-btn">Privacy Policy</button>
+      <button class="footer-btn">Terms of Use</button>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact Pestify</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Pestify Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="demo.html">Request a demo</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary"
+         href="https://app.pestify.com/login"
+         target="_blank"
+         rel="noopener noreferrer">
+        Login
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Let’s talk about your operations.</h1>
+    <p class="lead">
+      Tell us about your pest control business and we’ll show you how Pestify can streamline your workflow.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section>
+  <div class="container contact-grid">
+
+    <!-- LEFT INFO -->
+    <div class="contact-info">
+      <h3>Why contact us?</h3>
+      <ul>
+        <li>Custom onboarding guidance</li>
+        <li>Workflow configuration help</li>
+        <li>Enterprise pricing discussions</li>
+        <li>Partnership opportunities</li>
+      </ul>
+
+      <div class="contact-note">
+        We typically respond within 24 hours.
+      </div>
+    </div>
+
+    <!-- FORM -->
+    <div class="contact-card">
+      <form class="contact-form">
+
+        <div class="form-row">
+          <div>
+            <label>Name</label>
+            <input type="text" placeholder="Your full name" required />
+          </div>
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="you@company.com" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div>
+            <label>Company</label>
+            <input type="text" placeholder="Company name" />
+          </div>
+          <div>
+            <label>Team Size</label>
+            <input type="text" placeholder="e.g. 5 technicians" />
+          </div>
+        </div>
+
+        <div>
+          <label>Message</label>
+          <textarea placeholder="Tell us about your needs..."></textarea>
+        </div>
+
+        <div style="margin-top:20px;">
+          <button type="submit" class="btn btn-primary">
+            Send Message
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">PESTIFY</div>
+      <div class="footer-copy">
+        © <span id="year"></span> Pest - Free. All rights reserved.
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <button class="footer-btn">Privacy Policy</button>
+      <button class="footer-btn">Terms of Use</button>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
