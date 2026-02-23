@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact Pestify</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+<!-- Performance warmup (does not set cookies) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://stats.g.doubleclick.net">
+<link rel="preconnect" href="https://browser.sentry-cdn.com">
+
+<!-- Language script -->
+<script src="assets/js/language.js" defer></script>
 </head>
 
 <body>
@@ -19,19 +29,25 @@
     </div>
 
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="demo.html">Request a demo</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="demo.html" data-i18n="nav.demo">Request a demo</a>
     </nav>
 
     <div class="nav-cta">
       <a class="btn btn-primary"
          href="https://app.pestify.com/login"
          target="_blank"
-         rel="noopener noreferrer">
+         rel="noopener noreferrer"
+         data-i18n="nav.login">
         Login
       </a>
+    </div>
+
+    <div class="lang-switch">
+      <button data-lang="en">EN</button>
+      <button data-lang="gr">GR</button>
     </div>
 
   </div>
@@ -40,9 +56,9 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Let’s talk about your operations.</h1>
-    <p class="lead">
-      Tell us about your pest control business and we’ll show you how Pestify can streamline your workflow.
+    <h1 data-i18n="contact.title">Let's talk about your operations.</h1>
+    <p class="lead" data-i18n="contact.subtitle">
+      Tell us about your pest control business and we'll show you how Pestify can streamline your workflow.
     </p>
   </div>
 </section>
@@ -53,15 +69,15 @@
 
     <!-- LEFT INFO -->
     <div class="contact-info">
-      <h3>Why contact us?</h3>
+      <h3 data-i18n="contact.why_contact">Why contact us?</h3>
       <ul>
-        <li>Custom onboarding guidance</li>
-        <li>Workflow configuration help</li>
-        <li>Enterprise pricing discussions</li>
-        <li>Partnership opportunities</li>
+        <li data-i18n="contact.reason_1">Custom onboarding guidance</li>
+        <li data-i18n="contact.reason_2">Workflow configuration help</li>
+        <li data-i18n="contact.reason_3">Enterprise pricing discussions</li>
+        <li data-i18n="contact.reason_4">Partnership opportunities</li>
       </ul>
 
-      <div class="contact-note">
+      <div class="contact-note" data-i18n="contact.response_time">
         We typically respond within 24 hours.
       </div>
     </div>
@@ -72,33 +88,33 @@
 
         <div class="form-row">
           <div>
-            <label>Name</label>
-            <input type="text" placeholder="Your full name" required />
+            <label data-i18n="contact.name">Name</label>
+            <input type="text" data-i18n-placeholder="contact.placeholder_name" placeholder="Your full name" required />
           </div>
           <div>
-            <label>Email</label>
-            <input type="email" placeholder="you@company.com" required />
+            <label data-i18n="contact.email">Email</label>
+            <input type="email" data-i18n-placeholder="contact.placeholder_email" placeholder="you@company.com" required />
           </div>
         </div>
 
         <div class="form-row">
           <div>
-            <label>Company</label>
-            <input type="text" placeholder="Company name" />
+            <label data-i18n="contact.company">Company</label>
+            <input type="text" data-i18n-placeholder="contact.placeholder_company" placeholder="Company name" />
           </div>
           <div>
-            <label>Team Size</label>
-            <input type="text" placeholder="e.g. 5 technicians" />
+            <label data-i18n="contact.team_size">Team Size</label>
+            <input type="text" data-i18n-placeholder="contact.placeholder_team" placeholder="e.g. 5 technicians" />
           </div>
         </div>
 
         <div>
-          <label>Message</label>
-          <textarea placeholder="Tell us about your needs..."></textarea>
+          <label data-i18n="contact.message">Message</label>
+          <textarea data-i18n-placeholder="contact.placeholder_message" placeholder="Tell us about your needs..."></textarea>
         </div>
 
         <div style="margin-top:20px;">
-          <button type="submit" class="btn btn-primary">
+          <button type="submit" class="btn btn-primary" data-i18n="contact.send">
             Send Message
           </button>
         </div>
@@ -114,13 +130,14 @@
     <div>
       <div class="footer-brand">PESTIFY</div>
       <div class="footer-copy">
-        © <span id="year"></span> Pest - Free. All rights reserved.
+        © <span id="year"></span> Pest - Free. <span data-i18n="footer.rights">All rights reserved.</span>
       </div>
     </div>
 
     <div class="footer-links">
-      <button class="footer-btn">Privacy Policy</button>
-      <button class="footer-btn">Terms of Use</button>
+      <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
     </div>
   </div>
 </footer>
@@ -129,6 +146,6 @@
   document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
-
+<script src="assets/js/consent.js"></script>
 </body>
 </html>

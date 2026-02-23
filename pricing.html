@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pestify Pricing</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+<!-- Performance warmup (does not set cookies) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://stats.g.doubleclick.net">
+<link rel="preconnect" href="https://browser.sentry-cdn.com">
+
+<!-- Language script -->
+<script src="assets/js/language.js" defer></script>
 </head>
 
 <body>
@@ -19,19 +29,25 @@
     </div>
 
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="demo.html">Request a demo</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="demo.html" data-i18n="nav.demo">Request a demo</a>
     </nav>
 
     <div class="nav-cta">
       <a class="btn btn-primary"
          href="https://app.pestify.com/login"
          target="_blank"
-         rel="noopener noreferrer">
+         rel="noopener noreferrer"
+         data-i18n="nav.login">
         Login
       </a>
+    </div>
+
+    <div class="lang-switch">
+      <button data-lang="en">EN</button>
+      <button data-lang="gr">GR</button>
     </div>
 
   </div>
@@ -40,12 +56,12 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Simple, scalable pricing.</h1>
-    <p class="lead">
+    <h1 data-i18n="pricing.title">Simple, scalable pricing.</h1>
+    <p class="lead" data-i18n="pricing.subtitle">
     Choose a plan that fits your team size and operational needs.
     </p>
 
-    <div class="trial-banner">
+    <div class="trial-banner" data-i18n-html="pricing.trial">
      All plans include a <strong>1-Month Free Trial</strong>. No commitment.
     </div>
   </div>
@@ -57,52 +73,53 @@
 
     <!-- STARTER -->
     <div class="pricing-card">
-    <div class="trial-badge">1 Month Free Trial</div>
-      <h3>Starter</h3>
+    <div class="trial-badge" data-i18n="pricing.trial">1 Month Free Trial</div>
+      <h3 data-i18n="pricing.starter">Starter</h3>
       <div class="price">€39<span>/month</span></div>
-      <p class="pricing-sub">For small teams starting digital operations.</p>
+      <p class="pricing-sub" data-i18n="pricing.starter_desc">For small teams starting digital operations.</p>
       <ul>
-        <li>Includes 1 technician</li>
-        <li>50 customer profiles</li>
-        <li>Access to all features</li>
-        <li>Default branding</li>
+        <li><span data-i18n="pricing.includes">Includes</span> 1 <span data-i18n="pricing.technician">technician</span></li>
+        <li>50 <span data-i18n="pricing.customer_profiles">customer profiles</span></li>
+        <li data-i18n="pricing.access_all">Access to all features</li>
+        <li data-i18n="pricing.default_branding">Default branding</li>
       </ul>
-      <a class="btn" href="demo.html">Start Free Trial</a>
+      <a class="btn" href="demo.html" data-i18n="pricing.start_trial">Start Free Trial</a>
     </div>
 
     <!-- PROFESSIONAL -->
     <div class="pricing-card featured">
-      <div class="badge">Most Popular</div>
-      <div class="trial-badge">1 Month Free Trial</div>
-      <h3>Professional</h3>
+      <div class="badge" data-i18n="pricing.most_popular">Most Popular</div>
+      <div class="trial-badge" data-i18n="pricing.trial">1 Month Free Trial</div>
+      <h3 data-i18n="pricing.professional">Professional</h3>
       <div class="price">€79<span>/month</span></div>
-      <p class="pricing-sub">For growing pest control companies and more.</p>
+      <p class="pricing-sub" data-i18n="pricing.professional_desc">For growing pest control companies and more.</p>
       <ul>
-        <li>Includes 3 technicians</li>
-        <li>Unlimited customer profiles</li>
-        <li>Priority support</li>
-        <li>Custom branding</li>
+        <li><span data-i18n="pricing.includes">Includes</span> 3 <span data-i18n="pricing.technicians">technicians</span></li>
+        <li><span data-i18n="pricing.unlimited">Unlimited</span> <span data-i18n="pricing.customer_profiles">customer profiles</span></li>
+        <li data-i18n="pricing.priority_support">Priority support</li>
+        <li data-i18n="pricing.custom_branding">Custom branding</li>
       </ul>
       <a class="btn btn-primary"
          href="https://app.pestify.com/login"
          target="_blank"
-         rel="noopener noreferrer">
+         rel="noopener noreferrer"
+         data-i18n="pricing.start_trial">
         Start Free Trial
       </a>
     </div>
 
     <!-- ENTERPRISE -->
     <div class="pricing-card">
-      <h3>Enterprise</h3>
-      <div class="price">Custom</div>
-      <p class="pricing-sub">For large-scale or multi-region companies.</p>
+      <h3 data-i18n="pricing.enterprise">Enterprise</h3>
+      <div class="price" data-i18n="pricing.custom">Custom</div>
+      <p class="pricing-sub" data-i18n="pricing.enterprise_desc">For large-scale or multi-region companies.</p>
       <ul>
-        <li>Custom teams</li>
-        <li>Multi-branch management</li>
-        <li>Dedicated onboarding</li>
-        <li>Custom branding</li>
+        <li data-i18n="pricing.custom_teams">Custom teams</li>
+        <li data-i18n="pricing.multi_branch">Multi-branch management</li>
+        <li data-i18n="pricing.dedicated_onboarding">Dedicated onboarding</li>
+        <li data-i18n="pricing.custom_branding">Custom branding</li>
       </ul>
-      <a class="btn" href="contact.html">Contact Sales</a>
+      <a class="btn" href="contact.html" data-i18n="pricing.contact_sales">Contact Sales</a>
     </div>
 
   </div>
@@ -113,13 +130,14 @@
     <div>
       <div class="footer-brand">PESTIFY</div>
       <div class="footer-copy">
-        © <span id="year"></span> Pest - Free. All rights reserved.
+        © <span id="year"></span> Pest - Free. <span data-i18n="footer.rights">All rights reserved.</span>
       </div>
     </div>
 
     <div class="footer-links">
-      <button class="footer-btn">Privacy Policy</button>
-      <button class="footer-btn">Terms of Use</button>
+      <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
     </div>
   </div>
 </footer>
@@ -128,6 +146,6 @@
   document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
-
+<script src="assets/js/consent.js"></script>
 </body>
 </html>

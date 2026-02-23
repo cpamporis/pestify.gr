@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Pestify Features</title>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+<!-- Performance warmup (does not set cookies) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://stats.g.doubleclick.net">
+<link rel="preconnect" href="https://browser.sentry-cdn.com">
+
+<!-- Language script -->
+<script src="assets/js/language.js" defer></script>
 </head>
 
 <body>
@@ -19,19 +29,25 @@
     </div>
 
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="index.html#contact">Contact</a>
-      <a href="demo.html">Request a demo</a>
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="demo.html" data-i18n="nav.demo">Request a demo</a>
     </nav>
 
     <div class="nav-cta">
       <a class="btn btn-primary"
          href="https://app.pestify.com/login"
          target="_blank"
-         rel="noopener noreferrer">
+         rel="noopener noreferrer"
+         data-i18n="nav.login">
         Login
       </a>
+    </div>
+
+    <div class="lang-switch">
+      <button data-lang="en">EN</button>
+      <button data-lang="gr">GR</button>
     </div>
 
   </div>
@@ -40,8 +56,8 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container">
-    <h1>Powerful features built for modern pest control operations.</h1>
-    <p class="lead">
+    <h1 data-i18n="features.title">Powerful features built for modern pest control operations.</h1>
+    <p class="lead" data-i18n="features.subtitle">
       Pestify centralizes field workflows, compliance documentation, and team visibility into one structured system.
     </p>
   </div>
@@ -51,41 +67,41 @@
 <section>
   <div class="container">
 
-    <h2>Field Operations</h2>
-    <p class="lead">
+    <h2 data-i18n="features.field_ops">Field Operations</h2>
+    <p class="lead" data-i18n="features.field_ops_desc">
       Standardize every visit with structured workflows and guided service steps.
     </p>
     <ul>
-      <li>Guided technician checklists</li>
-      <li>Visit logging and history tracking</li>
-      <li>On-site documentation capture</li>
-      <li>Recurring visit scheduling</li>
+      <li data-i18n="features.field_ops_1">Guided technician checklists</li>
+      <li data-i18n="features.field_ops_2">Visit logging and history tracking</li>
+      <li data-i18n="features.field_ops_3">On-site documentation capture</li>
+      <li data-i18n="features.field_ops_4">Recurring visit scheduling</li>
     </ul>
 
     <br><br>
 
-    <h2>Property & Site Management</h2>
-    <p class="lead">
+    <h2 data-i18n="features.property">Property & Site Management</h2>
+    <p class="lead" data-i18n="features.property_desc">
       Maintain a complete history for each commercial or residential property.
     </p>
     <ul>
-      <li>Site-level records</li>
-      <li>Service frequency configuration</li>
-      <li>Multi-location client management</li>
-      <li>Historical inspection archive</li>
+      <li data-i18n="features.property_1">Site-level records</li>
+      <li data-i18n="features.property_2">Service frequency configuration</li>
+      <li data-i18n="features.property_3">Multi-location client management</li>
+      <li data-i18n="features.property_4">Historical inspection archive</li>
     </ul>
 
     <br><br>
 
-    <h2>Compliance & Documentation</h2>
-    <p class="lead">
+    <h2 data-i18n="features.compliance">Compliance & Documentation</h2>
+    <p class="lead" data-i18n="features.compliance_desc">
       Be prepared for audits and regulatory inspections.
     </p>
     <ul>
-      <li>Structured service reports</li>
-      <li>Standardized documentation templates</li>
-      <li>Organized visit logs</li>
-      <li>Export-ready documentation</li>
+      <li data-i18n="features.compliance_1">Structured service reports</li>
+      <li data-i18n="features.compliance_2">Standardized documentation templates</li>
+      <li data-i18n="features.compliance_3">Organized visit logs</li>
+      <li data-i18n="features.compliance_4">Export-ready documentation</li>
     </ul>
 
   </div>
@@ -96,8 +112,8 @@
   <div class="container">
     <div class="cta">
       <div>
-        <h3>Ready to streamline your operations?</h3>
-        <p>Access Pestify and modernize your pest control workflows.</p>
+        <h3 data-i18n="features.cta_title">Ready to streamline your operations?</h3>
+        <p data-i18n="features.cta_desc">Access Pestify and modernize your pest control workflows.</p>
       </div>
     </div>
   </div>
@@ -108,13 +124,14 @@
     <div>
       <div class="footer-brand">PESTIFY</div>
       <div class="footer-copy">
-        © <span id="year"></span> Pest - Free. All rights reserved.
+        © <span id="year"></span> Pest - Free. <span data-i18n="footer.rights">All rights reserved.</span>
       </div>
     </div>
 
     <div class="footer-links">
-      <button class="footer-btn">Privacy Policy</button>
-      <button class="footer-btn">Terms of Use</button>
+      <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
     </div>
   </div>
 </footer>
@@ -123,6 +140,6 @@
   document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
-
+<script src="assets/js/consent.js"></script>
 </body>
 </html>

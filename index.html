@@ -8,6 +8,16 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+<!-- Performance warmup (does not set cookies) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://stats.g.doubleclick.net">
+<link rel="preconnect" href="https://browser.sentry-cdn.com">
+
+<!-- Language script -->
+<script src="assets/js/language.js" defer></script>
 </head>
 
 <body>
@@ -22,19 +32,25 @@
         </div>
 
         <nav class="nav-links">
-          <a href="features.html">Features</a>
-          <a href="pricing.html">Pricing</a>
-          <a href="contact.html">Contact</a>
-          <a href="demo.html">Request a demo</a>
+          <a href="features.html" data-i18n="nav.features">Features</a>
+          <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+          <a href="demo.html" data-i18n="nav.demo">Request a demo</a>
         </nav>
 
         <div class="nav-cta">
           <a class="btn btn-primary"
             href="https://app.pestify.com/login"
             target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            data-i18n="nav.login">
             Login
           </a>
+        </div>
+
+        <div class="lang-switch">
+          <button data-lang="en">EN</button>
+          <button data-lang="gr">GR</button>
         </div>
 
       </div>
@@ -48,19 +64,19 @@
       <div class="container hero-grid">
 
         <div>
-          <h1>Run pest control like a modern operation.</h1>
-          <p class="lead">
+          <h1 data-i18n="home.title">Run pest control like a modern operation.</h1>
+          <p class="lead" data-i18n="home.subtitle">
             Pestify helps teams standardize service delivery, keep technicians aligned,
             and generate documentation ready for inspections and clients.
           </p>
 
-          <div class="trial-banner">
+          <div class="trial-banner" data-i18n-html="home.trial">
              Start with a <strong>1-Month Free Trial</strong>. No commitment required.
           </div>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.html">Get early access</a>
-            <a class="btn" href="features.html">See features</a>
+            <a class="btn btn-primary" href="contact.html" data-i18n="home.early_access">Get early access</a>
+            <a class="btn" href="features.html" data-i18n="home.see_features">See features</a>
           </div>
         </div>
 
@@ -84,16 +100,17 @@
     <div class="footer-left">
       <div class="footer-brand">PESTIFY</div>
       <div class="footer-copy">
-        © <span id="year"></span> Pest - Free. All rights reserved.
+        © <span id="year"></span> Pest - Free. <span data-i18n="footer.rights">All rights reserved.</span>
       </div>
-      <div class="footer-sub">
+      <div class="footer-sub" data-i18n="footer.product_of">
         Pestify is a product of Pest - Free.
       </div>
     </div>
 
     <div class="footer-links">
-      <button class="footer-btn">Privacy Policy</button>
-      <button class="footer-btn">Terms of Use</button>
+      <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
     </div>
 
   </div>
@@ -104,6 +121,6 @@
   document.getElementById("year").textContent =
     new Date().getFullYear();
 </script>
-
+<script src="assets/js/consent.js"></script>
 </body>
 </html>

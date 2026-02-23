@@ -435,3 +435,165 @@ h1{
     grid-template-columns:1fr;
   }
 }
+
+/* ================= DEMO PAGE ================= */
+
+.demo-grid{
+  display:grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap:40px;
+  margin-top:40px;
+}
+
+.demo-info ul{
+  padding-left:18px;
+  margin-top:15px;
+  color:rgba(255,255,255,.75);
+}
+
+.demo-info li{
+  margin-bottom:10px;
+}
+
+/* Premium Card */
+.demo-card{
+  padding:60px 40px;
+  border-radius:28px;
+  border:1px solid rgba(255,255,255,.08);
+  background:linear-gradient(
+    145deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.02)
+  );
+  box-shadow: 0 40px 80px rgba(0,0,0,.6);
+  position:relative;
+  overflow:hidden;
+}
+
+.demo-card::before{
+  content:"";
+  position:absolute;
+  inset:-50px;
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(31,156,139,.25),
+    transparent 60%
+  );
+  z-index:-1;
+}
+
+.demo-cta{
+  text-align:center;
+}
+
+.demo-cta h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.demo-cta p{
+  color:rgba(255,255,255,.7);
+  margin-bottom:30px;
+}
+
+.demo-button{
+  font-size:16px;
+  padding:16px 32px;
+  transition: all .25s ease;
+}
+
+.demo-button:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(31,156,139,.35);
+}
+
+/* Ensure Calendly popup is always above the site UI */
+.calendly-overlay,
+.calendly-popup {
+  z-index: 999999 !important;
+}
+
+/* ================= LEGAL PAGES ================= */
+
+.legal-wrap{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.legal-card{
+  padding: 34px;
+}
+
+.legal-card h2{
+  margin: 22px 0 10px;
+  font-size: 20px;
+}
+
+.legal-card h3{
+  margin: 18px 0 8px;
+  font-size: 16px;
+  color: rgba(255,255,255,.88);
+}
+
+.legal-card p{
+  color: rgba(255,255,255,.78);
+  line-height: 1.7;
+  margin: 10px 0;
+}
+
+.legal-card ul{
+  margin: 10px 0 14px;
+  padding-left: 18px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.7;
+}
+
+.legal-muted{
+  color: rgba(255,255,255,.62);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.legal-hr{
+  border: none;
+  border-top: 1px solid rgba(255,255,255,.10);
+  margin: 18px 0;
+}
+/* Language Switcher */
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  margin-left: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-switch button {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-switch button.active {
+  background: rgba(31, 175, 154, 0.2);
+  color: #1FAF9A;
+}
+
+.lang-switch button:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .lang-switch {
+    margin-left: auto;
+  }
+}

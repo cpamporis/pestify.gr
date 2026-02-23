@@ -1,0 +1,122 @@
+/* assets/css/consent.css */
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000000;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: rgba(7,10,13,.92);
+  backdrop-filter: blur(12px);
+  color: rgba(255,255,255,.92);
+  box-shadow: 0 24px 70px rgba(0,0,0,.6);
+}
+
+.cookie-banner h4{
+  margin:0 0 8px;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+.cookie-banner p{
+  margin:0 0 12px;
+  font-size:13px;
+  line-height:1.45;
+  color: rgba(255,255,255,.72);
+}
+
+.cookie-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+
+.cookie-actions button,
+.cookie-actions a{
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+  transition:all .2s ease;
+  color: rgba(255,255,255,.9);
+  text-decoration:none;
+}
+
+.cookie-actions button:hover,
+.cookie-actions a:hover{
+  background:rgba(255,255,255,.10);
+}
+
+.cookie-actions .primary{
+  border:none;
+  background:linear-gradient(135deg, #1FAF9A, #18C2A9);
+  color:#fff;
+}
+
+.cookie-actions .primary:hover{
+  opacity:.92;
+}
+
+/* Modal */
+.cookie-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000001;
+  background: rgba(0,0,0,.60);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.cookie-modal.open{ display:flex; }
+
+.cookie-panel{
+  width:100%;
+  max-width:720px;
+  border-radius:22px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(7,10,13,.96);
+  box-shadow: 0 24px 80px rgba(0,0,0,.65);
+}
+
+.cookie-row{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.cookie-row:first-of-type{ border-top:none; }
+
+.cookie-row small{
+  display:block;
+  margin-top:6px;
+  color:rgba(255,255,255,.62);
+  line-height:1.35;
+  font-size:12px;
+}
+
+.cookie-switch{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+
+.cookie-switch input{
+  width:18px;
+  height:18px;
+}

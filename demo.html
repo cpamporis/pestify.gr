@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Demo | Pestify</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+<!-- Performance warmup (does not set cookies) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://stats.g.doubleclick.net">
+<link rel="preconnect" href="https://browser.sentry-cdn.com">
+
+<!-- Language script -->
+<script src="assets/js/language.js" defer></script>
+</head>
+
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/images/logo.png" alt="Pestify Logo" class="logo-img" />
+      </a>
+    </div>
+
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="features.html" data-i18n="nav.features">Features</a>
+      <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a class="btn btn-primary"
+         href="https://app.pestify.com/login"
+         target="_blank"
+         rel="noopener noreferrer"
+         data-i18n="nav.login">
+        Login
+      </a>
+    </div>
+
+    <div class="lang-switch">
+      <button data-lang="en">EN</button>
+      <button data-lang="gr">GR</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1 data-i18n="demo.title">Book a personalized demo.</h1>
+    <p class="lead" data-i18n="demo.subtitle">
+      We'll walk you through Pestify based on your workflow and compliance needs.
+    </p>
+  </div>
+</section>
+
+<!-- DEMO FORM -->
+<section>
+  <div class="container demo-grid">
+
+    <div class="demo-info">
+      <h3 data-i18n="demo.expect">What to expect</h3>
+      <ul>
+        <li data-i18n="demo.expect_1">Live walkthrough of the platform</li>
+        <li data-i18n="demo.expect_2">Compliance workflow explanation</li>
+        <li data-i18n="demo.expect_3">Team & technician setup guidance</li>
+        <li data-i18n="demo.expect_4">Q&A tailored to your operation</li>
+      </ul>
+
+      <div class="contact-note" data-i18n="demo.duration">
+        Demo duration: ~30 minutes
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-cta">
+        <h3 data-i18n="demo.ready">Ready to see Pestify in action?</h3>
+        <p data-i18n="demo.choose_time">Choose a time that works for you and book instantly.</p>
+
+        <button
+            type="button"
+            class="btn btn-primary demo-button"
+            id="calendlyBtn"
+            data-i18n="demo.book">
+            Book Your Demo
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("calendlyBtn");
+
+  btn.addEventListener("click", function () {
+    if (!window.Calendly || !Calendly.initPopupWidget) {
+      console.error("Calendly failed to load:", window.Calendly);
+      return;
+    }
+
+    Calendly.initPopupWidget({
+      url: "https://calendly.com/pest-free-info/pestify-demo"
+    });
+  });
+});
+</script>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">PESTIFY</div>
+      <div class="footer-copy">
+        © <span id="year"></span> Pest - Free. <span data-i18n="footer.rights">All rights reserved.</span>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+      <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+<script src="assets/js/consent.js"></script>
+</body>
+</html>
