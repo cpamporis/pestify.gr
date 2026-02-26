@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css - Single file for both desktop and mobile */
 :root{
   --bg: #070A0D;
   --text: rgba(255,255,255,.92);
@@ -32,6 +32,7 @@ a{
 .nav{
   position:sticky;
   top:0;
+  z-index: 10002;
   background:rgba(7,10,13,.85);
   backdrop-filter:blur(12px);
   border-bottom:1px solid rgba(255,255,255,.08);
@@ -44,7 +45,7 @@ a{
 }
 
 .logo-img{
-  height: 120px;        
+  height: 130px;        
   width:auto;
   display:block;
 }
@@ -129,97 +130,7 @@ h1{
   display:block;
 }
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width:900px){
-  .hero-grid{
-    grid-template-columns:1fr;
-  }
-
-  h1{
-    font-size:36px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-  margin-top:80px;
-  padding:40px 0;
-  border-top:1px solid rgba(255,255,255,.08);
-  background:rgba(0,0,0,.25);
-}
-
-.footer-inner{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  gap:30px;
-  flex-wrap:wrap;
-}
-
-.footer-brand{
-  font-weight:800;
-  font-size:16px;
-  letter-spacing:.5px;
-  margin-bottom:6px;
-}
-
-.footer-copy{
-  font-size:13px;
-  color:rgba(255,255,255,.65);
-  margin-bottom:6px;
-}
-
-.footer-sub{
-  font-size:12px;
-  color:rgba(255,255,255,.45);
-}
-
-.footer-links{
-  display:flex;
-  gap:14px;
-}
-
-.footer-btn{
-  padding:8px 14px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(255,255,255,.05);
-  color:rgba(255,255,255,.8);
-  font-size:13px;
-  cursor:pointer;
-  transition:all .2s ease;
-}
-
-.footer-btn:hover{
-  background:rgba(255,255,255,.1);
-  border-color:rgba(255,255,255,.25);
-}
-
-/* Responsive */
-@media (max-width:700px){
-  .footer-inner{
-    flex-direction:column;
-    gap:20px;
-  }
-
-  .footer-links{
-    flex-direction:column;
-    width:100%;
-  }
-
-  .footer-btn{
-    width:100%;
-    text-align:center;
-  }
-}
-
-/* NAV LINK HOVER EFFECT */
+/* ================= NAV LINK HOVER EFFECT ================= */
 .nav-links a {
   position: relative;
   transition: color 0.2s ease;
@@ -242,19 +153,6 @@ h1{
 
 .nav-links a:hover::after {
   width: 100%;
-}
-
-/* FOOTER BUTTON HOVER EFFECT */
-.footer-btn {
-  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-  text-decoration: none;
-}
-
-.footer-btn:hover {
-  color: #1f9c8b;
-  background: rgba(31,156,139, 0.08);
-  border-color: #1f9c8b;
-  text-decoration: none; /* ensures no underline */
 }
 
 /* ================= PRICING ================= */
@@ -329,13 +227,6 @@ h1{
   border-radius:999px;
   font-size:12px;
   font-weight:600;
-}
-
-/* Responsive */
-@media (max-width:900px){
-  .pricing-grid{
-    grid-template-columns:1fr;
-  }
 }
 
 /* ================= FREE TRIAL ================= */
@@ -424,16 +315,6 @@ h1{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:20px;
-}
-
-@media (max-width:900px){
-  .contact-grid{
-    grid-template-columns:1fr;
-  }
-
-  .form-row{
-    grid-template-columns:1fr;
-  }
 }
 
 /* ================= DEMO PAGE ================= */
@@ -559,7 +440,8 @@ h1{
   border-top: 1px solid rgba(255,255,255,.10);
   margin: 18px 0;
 }
-/* Language Switcher */
+
+/* ================= LANGUAGE SWITCHER ================= */
 .lang-switch {
   display: flex;
   gap: 4px;
@@ -591,9 +473,285 @@ h1{
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* Mobile responsive */
+/* ================= COOKIE CONSENT ================= */
+
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1000000;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 18px;
+  background: rgba(7,10,13,.92);
+  backdrop-filter: blur(12px);
+  color: rgba(255,255,255,.92);
+  box-shadow: 0 24px 70px rgba(0,0,0,.6);
+}
+
+.cookie-banner h4{
+  margin:0 0 8px;
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.2px;
+}
+
+.cookie-banner p{
+  margin:0 0 12px;
+  font-size:13px;
+  line-height:1.45;
+  color: rgba(255,255,255,.72);
+}
+
+.cookie-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+
+.cookie-actions button,
+.cookie-actions a{
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.05);
+  font-weight:700;
+  font-size:13px;
+  cursor:pointer;
+  transition:all .2s ease;
+  color: rgba(255,255,255,.9);
+  text-decoration:none;
+}
+
+.cookie-actions button:hover,
+.cookie-actions a:hover{
+  background:rgba(255,255,255,.10);
+}
+
+.cookie-actions .primary{
+  border:none;
+  background:linear-gradient(135deg, #1FAF9A, #18C2A9);
+  color:#fff;
+}
+
+.cookie-actions .primary:hover{
+  opacity:.92;
+}
+
+/* Modal */
+.cookie-modal{
+  position:fixed;
+  inset:0;
+  z-index:1000001;
+  background: rgba(0,0,0,.60);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+}
+
+.cookie-modal.open{ display:flex; }
+
+.cookie-panel{
+  width:100%;
+  max-width:720px;
+  border-radius:22px;
+  padding:18px;
+  border:1px solid rgba(255,255,255,.14);
+  background: rgba(7,10,13,.96);
+  box-shadow: 0 24px 80px rgba(0,0,0,.65);
+}
+
+.cookie-row{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:14px 0;
+  border-top:1px solid rgba(255,255,255,.10);
+}
+
+.cookie-row:first-of-type{ border-top:none; }
+
+.cookie-row small{
+  display:block;
+  margin-top:6px;
+  color:rgba(255,255,255,.62);
+  line-height:1.35;
+  font-size:12px;
+}
+
+.cookie-switch{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  white-space:nowrap;
+}
+
+.cookie-switch input{
+  width:18px;
+  height:18px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+  margin-top:80px;
+  padding:40px 0;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.25);
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.footer-brand{
+  font-weight:800;
+  font-size:16px;
+  letter-spacing:.5px;
+  margin-bottom:6px;
+}
+
+.footer-copy{
+  font-size:13px;
+  color:rgba(255,255,255,.65);
+  margin-bottom:6px;
+}
+
+.footer-sub{
+  font-size:12px;
+  color:rgba(255,255,255,.45);
+}
+
+.footer-links {
+  flex-direction: row;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.footer-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 12px;
+  color: rgba(255,255,255,.5);
+  border-radius: 0;
+}
+
+.footer-btn:hover {
+  background: none;
+  border: none;
+  color: #1f9c8b;
+}
+
+/* ================= MOBILE NAV OVERLAY ================= */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+  z-index: 10003;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* MOBILE ONLY */
 @media (max-width: 900px) {
-  .lang-switch {
+  .logo-img {
+    height: 80px;
+  }
+
+  .nav-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /* Overlay panel (not full height container) */
+  .nav-links {
+    position: fixed;
+    top: 70px; /* below header */
+    right: 20px;
+    width: 220px;
+    padding: 20px;
+    background: rgba(7,10,13,0.98);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 16px;
+    flex-direction: column;
+    gap: 18px;
+    font-size: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 10004;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-cta {
     margin-left: auto;
+  }
+
+  .lang-switch {
+    margin-left: 10px;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  /* Pull entire navbar content more to the left */
+  .nav .container {
+    padding-left: 0;
+    padding-right: 8px;
+  }
+
+  /* Remove logo negative hack if you added it */
+  .brand {
+    margin-left: 0;
+  }
+
+  /* Slightly reduce right edge pressure */
+  .nav-toggle {
+    margin-right: 2px;
+  }
+
+  /* Mobile grid fixes */
+  .hero-grid,
+  .pricing-grid,
+  .contact-grid,
+  .demo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 32px;
   }
 }

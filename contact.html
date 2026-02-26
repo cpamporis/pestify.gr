@@ -51,6 +51,12 @@
       <button data-lang="gr">GR</button>
     </div>
 
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </div>
 </header>
 
@@ -148,5 +154,40 @@
     new Date().getFullYear();
 </script>
 <script src="assets/js/consent.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".nav-links");
+  const body = document.body;
+
+  if (!toggle || !nav) return;
+
+  // Toggle menu
+  toggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    nav.classList.toggle("open");
+    body.classList.toggle("menu-open");
+  });
+
+  // Prevent clicks inside menu from closing it
+  nav.addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
+
+  // Close when clicking outside
+  document.addEventListener("click", function () {
+    nav.classList.remove("open");
+    body.classList.remove("menu-open");
+  });
+
+  // Close when clicking a link
+  nav.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function () {
+      nav.classList.remove("open");
+      body.classList.remove("menu-open");
+    });
+  });
+});
+</script>
 </body>
 </html>
