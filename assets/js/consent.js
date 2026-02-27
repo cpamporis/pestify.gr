@@ -83,6 +83,11 @@ function setConsent(consent){
   try { localStorage.setItem(PESTIFY.CONSENT_KEY, JSON.stringify(payload)); } catch {}
   writeCookie(PESTIFY.CONSENT_KEY, JSON.stringify(payload), PESTIFY.CONSENT_MAX_DAYS * 24 * 60 * 60);
 
+  // 🔔 Notify pages/components that consent has changed
+  document.dispatchEvent(
+    new CustomEvent("pestify:consentUpdated", { detail: payload })
+  );
+
   return payload;
 }
 

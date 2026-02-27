@@ -3,19 +3,29 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Cookie Policy | Pestify</title>
-  <meta name="description" content="Cookie Policy for Pestify (Pest - Free)." />
+  <title data-i18n="terms.page_title">Terms of Use | Pestify</title>
+  <meta name="description" content="Terms of Use for Pestify (Pest - Free)." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/consent.css">
+
+  <!-- Performance warmup (does not set cookies) -->
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.google-analytics.com">
+  <link rel="preconnect" href="https://stats.g.doubleclick.net">
+  <link rel="preconnect" href="https://browser.sentry-cdn.com">
+
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
 
-<!-- Language script -->
-<script src="assets/js/language.js" defer></script>
+  <!-- Language script -->
+  <script src="assets/js/language.js" defer></script>
 </head>
 
 <body>
 
 <header class="nav">
   <div class="container nav-inner">
+
     <div class="brand">
       <a href="index.html">
         <img src="assets/images/logo.png" alt="Pestify Logo" class="logo-img" />
@@ -32,7 +42,7 @@
 
     <div class="nav-cta">
       <a class="btn btn-primary"
-         href="https://app.pestify.gr"
+         href="https://app.pestify.com/login"
          target="_blank"
          rel="noopener noreferrer"
          data-i18n="nav.login">
@@ -50,18 +60,21 @@
       <span></span>
       <span></span>
     </button>
+
   </div>
 </header>
 
 <section class="hero">
   <div class="container">
-    <h1 data-i18n="cookies.title">Cookie Policy</h1>
-    <p class="lead" data-i18n-html="cookies.subtitle">
-      This Cookie Policy explains how Pestify (Pest – Free) uses cookies and similar technologies on <strong>pestify.gr</strong>.
+    <h1 data-i18n="terms.title">Terms of Use</h1>
+    <p class="lead" data-i18n="terms.subtitle">
+      These Terms govern your access to and use of Pestify.
     </p>
 
     <div class="trial-banner" style="margin-top:14px;">
-      <span data-i18n="cookies.effective">Effective Date</span>: <strong>23/02/2026</strong> &nbsp;•&nbsp; <span data-i18n="cookies.last_updated">Last Updated</span>: <strong>23/02/2026</strong>
+      <span data-i18n="terms.effective">Effective Date</span>: <strong>23/02/2026</strong>
+      &nbsp;•&nbsp;
+      <span data-i18n="terms.last_updated">Last Updated</span>: <strong>23/02/2026</strong>
     </div>
   </div>
 </section>
@@ -70,84 +83,209 @@
   <div class="container legal-wrap">
     <div class="contact-card legal-card">
 
-      <p class="legal-muted">
-        Pestify is operated by <strong>Pest – Free</strong> (Owner: <strong>Χρήστος Παμπόρης / Christos Pamporis</strong>), Greece.
-        For general personal data processing information, please see our <a href="privacy.html">Privacy Policy</a>.
-      </p>
+      <!-- IMPORTANT:
+        We use data-i18n-html to allow headings, lists, and line breaks to translate as one block.
+        Your language.js already supports this via data-i18n-html attribute.
+      -->
+      <div data-i18n="terms.body" data-i18n-html>
+        <!-- Fallback content (English) in case translations fail to load -->
+        <h2>Terms of Use</h2>
+        <p><strong>Effective Date:</strong> 23/02/2026<br>
+           <strong>Last Updated:</strong> 23/02/2026</p>
 
-      <hr class="legal-hr" />
+        <p>These Terms of Use (“Terms”) govern your access to and use of:</p>
+        <ul>
+          <li><strong>pestify.gr</strong> (marketing website), and</li>
+          <li><strong>app.pestify.gr</strong> and related mobile applications (the “Platform”),</li>
+        </ul>
 
-      <h2>1. What are cookies?</h2>
-      <p>
-        Cookies are small text files stored on your device when you visit a website. Similar technologies may include local storage
-        (e.g., localStorage/sessionStorage) or technical identifiers used to enable basic site functions.
-      </p>
-      <p class="legal-muted">
-        In the EU, the use of cookies is primarily regulated by the ePrivacy rules (implemented nationally) and complemented by GDPR
-        requirements for transparency and lawful processing.
-      </p>
+        <p>operated by:</p>
+        <p><strong>Pest – Free</strong><br>
+           Owner: <strong>Christos Pamporis (Χρήστος Παμπόρης)</strong><br>
+           Greece</p>
 
-      <h2>2. How pestify.gr uses cookies today</h2>
-      <p>
-        At the time of this policy, <strong>pestify.gr does not use analytics cookies or marketing/advertising cookies</strong>.
-        We do not run behavioral tracking, profiling, or remarketing on this website.
-      </p>
+        <p>By accessing or using Pestify, you agree to be bound by these Terms.</p>
+        <p>If you do not agree, you must not use the services.</p>
 
-      <h3>2.1 Strictly necessary (technical) cookies</h3>
-      <p>
-        Our marketing website is informational and does not require accounts or logins. As a result, we do not intentionally set
-        cookies for login sessions on <strong>pestify.gr</strong>.
-      </p>
-      <p class="legal-muted">
-        However, basic technical operations by your browser and our hosting infrastructure (e.g., security protections, performance,
-        or server functionality) may involve strictly necessary technical storage. Where such cookies exist, they are used only to
-        provide the website you request and do not require consent under EU cookie rules.
-      </p>
+        <hr class="legal-hr" />
 
-      <h3>2.2 Analytics cookies</h3>
-      <p>
-        We do not use analytics cookies on pestify.gr at this time (for example, Google Analytics).
-      </p>
+        <h2>1. Scope of the Services</h2>
+        <p>Pestify is a digital software platform designed for pest control businesses to:</p>
+        <ul>
+          <li>Manage customer data</li>
+          <li>Organize service schedules</li>
+          <li>Maintain service logs and documentation</li>
+          <li>Generate structured compliance reports</li>
+          <li>Improve operational workflows</li>
+        </ul>
+        <p>The marketing website (pestify.gr) is informational only and does not provide pest control services.</p>
 
-      <h3>2.3 Marketing cookies</h3>
-      <p>
-        We do not use marketing or advertising cookies on pestify.gr at this time (for example, Google Ads conversion tracking).
-      </p>
+        <h2>2. Eligibility</h2>
+        <p>The Platform is intended primarily for business users (B2B).</p>
+        <p>By using the Platform, you confirm that:</p>
+        <ul>
+          <li>You are acting on behalf of a business entity, or</li>
+          <li>You are legally authorized to bind the business you represent</li>
+        </ul>
+        <p>If you are a consumer within the meaning of EU consumer law, certain mandatory consumer protections may apply.</p>
 
-      <h2>3. Calendly (demo booking)</h2>
-      <p>
-        If you request a demo through Calendly (for example, via a Calendly booking flow), Calendly may process your information and
-        may use its own cookies or similar technologies. Calendly’s processing is governed by its own policies.
-      </p>
-      <p class="legal-muted">
-        We recommend reviewing Calendly’s privacy/cookie information before submitting a booking. Pestify does not control cookies
-        that may be set by Calendly.
-      </p>
+        <h2>3. Account Registration</h2>
+        <p>To access the Platform, you may need to create an account.</p>
+        <p>You agree to:</p>
+        <ul>
+          <li>Provide accurate and complete information</li>
+          <li>Maintain confidentiality of login credentials</li>
+          <li>Be responsible for all activities under your account</li>
+        </ul>
+        <p>You must notify us immediately of unauthorized use.</p>
+        <p>We reserve the right to suspend or terminate accounts in case of breach.</p>
 
-      <h2>4. Managing cookies</h2>
-      <p>
-        You can control cookies through your browser settings, including blocking or deleting cookies. Please note that blocking strictly
-        necessary cookies (where they exist) may affect basic website functionality.
-      </p>
-      <p class="legal-muted">
-        Browser help pages typically explain how to manage cookies for your browser (Chrome, Safari, Firefox, Edge).
-      </p>
+        <h2>4. Subscription &amp; Payments</h2>
+        <p>If paid plans are offered:</p>
+        <ul>
+          <li>Subscription fees are stated on the Pricing page.</li>
+          <li>Fees are exclusive of VAT unless stated otherwise.</li>
+          <li>Payment terms will be specified at checkout.</li>
+          <li>Failure to pay may result in suspension.</li>
+        </ul>
+        <p>Free trials, if offered, convert to paid subscriptions unless cancelled before expiration.</p>
 
-      <h2>5. Changes to this Cookie Policy</h2>
-      <p>
-        If we introduce analytics, advertising, or other non-essential cookies in the future, we will:
-      </p>
-      <ul>
-        <li>Update this Cookie Policy</li>
-        <li>Implement a consent mechanism where legally required</li>
-        <li>Provide the ability to withdraw consent</li>
-      </ul>
+        <h2>5. Acceptable Use</h2>
+        <p>You agree NOT to:</p>
+        <ul>
+          <li>Use the Platform for unlawful purposes</li>
+          <li>Upload illegal or harmful content</li>
+          <li>Interfere with system security</li>
+          <li>Reverse engineer, copy, or exploit the software</li>
+          <li>Use the Platform to process data without legal basis under GDPR</li>
+        </ul>
+        <p>You are solely responsible for the legality of the data you upload.</p>
 
-      <hr class="legal-hr" />
+        <h2>6. Intellectual Property</h2>
+        <p>All intellectual property rights in:</p>
+        <ul>
+          <li>Software</li>
+          <li>Code</li>
+          <li>Design</li>
+          <li>Branding</li>
+          <li>Documentation</li>
+          <li>Logos</li>
+        </ul>
+        <p>are owned by Pest – Free unless otherwise stated.</p>
+        <p>You are granted a limited, non-exclusive, non-transferable license to use the Platform for internal business purposes only.</p>
+        <p>You may not:</p>
+        <ul>
+          <li>Resell the Platform</li>
+          <li>Modify or redistribute it</li>
+          <li>Create derivative works</li>
+        </ul>
 
-      <p class="legal-muted">
-        Questions about this Cookie Policy: <a href="mailto:info@pest-free.gr">info@pest-free.gr</a>
-      </p>
+        <h2>7. Data Protection (GDPR Roles)</h2>
+        <h3>7.1 Marketing Website</h3>
+        <p>For pestify.gr, Pest – Free acts as Data Controller as described in the Privacy Policy.</p>
+
+        <h3>7.2 Application Platform</h3>
+        <p>When business customers upload personal data (e.g., homeowner names):</p>
+        <ul>
+          <li>The pest control company is the Data Controller</li>
+          <li>Pestify acts as a Data Processor under Article 28 GDPR</li>
+        </ul>
+        <p>We process data solely:</p>
+        <ul>
+          <li>On documented instructions from the business customer</li>
+          <li>To provide the contracted service</li>
+        </ul>
+        <p>Requests from individuals (data subjects) should primarily be directed to the business acting as Controller.</p>
+        <p>A Data Processing Agreement (DPA) may apply where required by law.</p>
+
+        <h2>8. Availability of Service</h2>
+        <p>We aim to provide continuous access but do not guarantee uninterrupted availability.</p>
+        <p>The Platform may be temporarily unavailable due to:</p>
+        <ul>
+          <li>Maintenance</li>
+          <li>Security updates</li>
+          <li>Technical failures</li>
+          <li>Force majeure events</li>
+        </ul>
+        <p>We reserve the right to modify or discontinue features.</p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>To the maximum extent permitted under Greek and EU law:</p>
+        <ul>
+          <li>The Platform is provided “as is”.</li>
+          <li>We do not guarantee error-free or uninterrupted service.</li>
+          <li>We are not liable for indirect, incidental, or consequential damages.</li>
+          <li>Our total liability shall not exceed the amount paid by the customer in the preceding 12 months.</li>
+        </ul>
+        <p>Nothing in these Terms excludes liability for:</p>
+        <ul>
+          <li>Death or personal injury caused by negligence</li>
+          <li>Fraud or fraudulent misrepresentation</li>
+          <li>Any liability that cannot be excluded under applicable law</li>
+        </ul>
+
+        <h2>10. No Professional Advice</h2>
+        <p>Pestify is a software tool.</p>
+        <p>It does not provide:</p>
+        <ul>
+          <li>Legal advice</li>
+          <li>Regulatory advice</li>
+          <li>Pest control services</li>
+          <li>Certification guarantees</li>
+        </ul>
+        <p>Users remain fully responsible for regulatory compliance in their jurisdiction.</p>
+
+        <h2>11. Termination</h2>
+        <p>We may suspend or terminate access if:</p>
+        <ul>
+          <li>You breach these Terms</li>
+          <li>You fail to pay subscription fees</li>
+          <li>Use poses security risks</li>
+          <li>Required by law</li>
+        </ul>
+        <p>You may terminate your account at any time.</p>
+        <p>Upon termination:</p>
+        <ul>
+          <li>Access is revoked</li>
+          <li>Data may be deleted according to the Privacy Policy</li>
+        </ul>
+
+        <h2>12. Third-Party Services</h2>
+        <p>The Platform may integrate third-party services such as:</p>
+        <ul>
+          <li>Hosting providers</li>
+          <li>Calendly (demo booking)</li>
+          <li>Infrastructure services</li>
+        </ul>
+        <p>We are not responsible for third-party policies or performance.</p>
+
+        <h2>13. Confidentiality</h2>
+        <p>Both parties agree to maintain confidentiality of non-public business information.</p>
+        <p>This obligation survives termination.</p>
+
+        <h2>14. Force Majeure</h2>
+        <p>We are not liable for failure to perform due to events beyond reasonable control, including:</p>
+        <ul>
+          <li>Natural disasters</li>
+          <li>War</li>
+          <li>Government actions</li>
+          <li>Internet failures</li>
+          <li>Power outages</li>
+        </ul>
+
+        <h2>15. Governing Law &amp; Jurisdiction</h2>
+        <p>These Terms are governed by the laws of Greece.</p>
+        <p>Any disputes shall be subject to the exclusive jurisdiction of the courts of Greece, unless mandatory EU consumer law provides otherwise.</p>
+
+        <h2>16. Amendments</h2>
+        <p>We may update these Terms.</p>
+        <p>Updated versions will be published on this page with a revised date.</p>
+        <p>Continued use constitutes acceptance.</p>
+
+        <h2>17. Contact</h2>
+        <p>For legal inquiries:</p>
+        <p>📧 <a href="mailto:info@pest-free.gr">info@pest-free.gr</a></p>
+      </div>
 
     </div>
   </div>
@@ -165,7 +303,7 @@
     <div class="footer-links">
       <a class="footer-btn" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
       <a class="footer-btn" href="terms.html" data-i18n="footer.terms">Terms of Use</a>
-      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Policy</a>
+      <a class="footer-btn" href="cookies.html" data-i18n="footer.cookies">Cookie Settings</a>
     </div>
   </div>
 </footer>
@@ -173,7 +311,9 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 <script src="assets/js/consent.js"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const toggle = document.querySelector(".nav-toggle");
@@ -182,25 +322,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!toggle || !nav) return;
 
-  // Toggle menu
   toggle.addEventListener("click", function (e) {
     e.stopPropagation();
     nav.classList.toggle("open");
     body.classList.toggle("menu-open");
   });
 
-  // Prevent clicks inside menu from closing it
   nav.addEventListener("click", function (e) {
     e.stopPropagation();
   });
 
-  // Close when clicking outside
   document.addEventListener("click", function () {
     nav.classList.remove("open");
     body.classList.remove("menu-open");
   });
 
-  // Close when clicking a link
   nav.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", function () {
       nav.classList.remove("open");
@@ -209,5 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
+
 </body>
 </html>
