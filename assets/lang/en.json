@@ -164,7 +164,7 @@
     "technician_data": "Technician data",
     "technician_data_desc": "technician name and age (used only for internal operational management)",
     "images": "Images",
-    "images_desc": "admin uploads images created by the admin (top-view diagrams of buildings / locations) and technicians may attach photos to their service reports (optional)",
+    "images_desc": "admin uploads images created by the admin (top-view diagrams of buildings / locations) and technicians may attach photos to their service reports (optional) and customers may upload photos when requesting an emergency service schedule.",
     "no_payment_data": "No payment data is processed. No transactions take place through the platform.",
     "gdpr_roles": "Roles under GDPR (Controller / Processor)",
     "gdpr_roles_desc": "When pest control companies use Pestify and upload personal data of private individuals (e.g., homeowner names), the pest control company is typically the",
